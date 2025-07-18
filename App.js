@@ -1,3 +1,6 @@
+        import React from "react";
+        import ReactDOM from "react-dom/client";
+
 
       const headingEl = React.createElement("h1", {}, "Revising React");
       const root = ReactDOM.createRoot(document.getElementById("root")); // this reactDOM api helping to render the elemnt in the root div and displaying it on the browser
