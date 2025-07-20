@@ -1,26 +1,33 @@
-        import React from "react";
-        import ReactDOM from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
+// Create a React element
+// const heading = React.createElement("h1", { id: "title" }, "Hello Ghazala");
 
-      const headingEl = React.createElement("h1", {}, "Revising React");
-      const root = ReactDOM.createRoot(document.getElementById("root")); // this reactDOM api helping to render the elemnt in the root div and displaying it on the browser
+//JSX Syntax
+// JSX => Babel transpiles JSX to React.createElement calls => objects => render as html element
+const heading = (
+  <h1 id="title" className="heading">
+    Hello Ghazala
+  </h1>
+);
 
-      const paragraphEl = React.createElement(
-        "p",
-        {},
-        "This is a paragraph element created using React."
-      );
+const  Buttton = () => {
+  return <button id="button">Click Me</button>
+}
 
-      root.render(headingEl);
-      root.render(paragraphEl);
-      // The above line will replace the previous content in the root div with the new paragraph element.
-      // To render both elements, we can wrap them in a parent element like a div.
-      const containerEl = React.createElement(
-        "div",
-        {},
-        headingEl,
-        paragraphEl
-      );
-      root.render(containerEl);
-      // Now both the heading and paragraph will be displayed together in the root div.
-  
+//Component Composition 
+// Component composition is the practice of combining multiple components to build more complex UIs in React.
+const Container = () => {
+  return (
+    <div className="container">
+      heel
+      1234
+      {heading}
+      {2333}
+      <Buttton /> 
+    </div>
+  )
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Container />);
